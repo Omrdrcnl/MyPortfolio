@@ -5,6 +5,11 @@
     box-sizing: border-box;
     text-decoration: none !important;
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
 /* all similar content styling codes */
 section{
     padding: 100px 0;
@@ -253,13 +258,13 @@ section .title::after{
 }
 
 /* services section styling */
-.services, .teams{
+.services, .teams, .contact{
     color:#fff;
     background: #111;
     font-family: 'Poppins', sans-serif;
 }
 .services .title::before,
-.teams .title::before{
+.teams .title::before, .contact .title::before{
     background: #fff;
 }
 .services .title::after,
@@ -374,6 +379,60 @@ section .title::after{
     width: 30%;
 }
 
+/* İletişim Section Styling */
+
+.contact .title::after{
+    content: "get in touch";
+    color: crimson;
+    background-color: #111;
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: crimson;
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-title{
+    color: crimson;
+}
+
+/* footer section styling */
+footer{
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color: crimson;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
 
 
 /* Responsive media */

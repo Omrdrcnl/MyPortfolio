@@ -9,7 +9,19 @@
 html{
     scroll-behavior: smooth;
 }
-
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 /* all similar content styling codes */
 section{
     padding: 100px 0;
@@ -19,7 +31,7 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .skills, .teams, .contact, footer{
+.about, .services, .skills, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
@@ -107,6 +119,7 @@ section .title::after{
     font-weight: 400;
     margin-left: 25px ;
     transition: color 0.8s ease;
+    display: block;
 }
 
 .navbar .menu li a:hover{
@@ -120,7 +133,35 @@ section .title::after{
     color: #fff;
     font-size: 23px;
     cursor: pointer;
-    
+    display: none ;
+}
+.scroll-up-btn{
+    position: fixed;
+    width: 42px;
+    height: 45px;
+    background: crimson;
+    text-align: center;
+    right: 30px;
+    bottom: 10px;
+    color: #fff;
+    z-index: 999;
+    font-size: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scroll-up-btn:hover{
+    opacity: 0.8;
 }
 
 
@@ -148,7 +189,7 @@ section .title::after{
     margin-left: -3px;
 }
 
-.home.home-content.text-3{
+.home .home-content .text-3{
     font-size: 40px;
     margin: 5px 0;
 }
@@ -460,7 +501,7 @@ footer span a:hover{
         z-index: 999;
     }
     .menu-btn i.active:before{
-        content: "/f00d";
+        content: "X";
     }
     .navbar .menu{
         position: fixed;
@@ -543,5 +584,13 @@ footer span a:hover{
     }
     .skills .skills-content .left .text{
         font-size: 19px;
+    }
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
     }
 }
